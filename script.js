@@ -100,14 +100,14 @@ async function getIdOfmeal(idOfmeal) {
         </div>
      </div>
              <h3>Preparation Instructions: ${meal.strMeal}</h3>
-       <p>${PreparationInstructions}</p>
-       <button class="back">back</button>
-</div>
-
-`;
+       <p id="PreparationInstructionsText">${PreparationInstructions}</p>
+     
+</div>`;
 }
-if (!singlemeal.innerHTML == 0) {
-  document.querySelector(".back").addEventListener("click", () => {
-    singlemeal.innerHTML = "";
+const backBtn = document.getElementById("back");
+if (singlemeal !== "") {
+  backBtn.addEventListener("click", () => {
+    window.location.reload();
+    backBtn.style.display = "flex";
   });
 }

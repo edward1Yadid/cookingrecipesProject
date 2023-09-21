@@ -217,7 +217,7 @@ img {
 }
 
 
-.back {
+#back {
 
     padding: 10px 20px;
     font-size: 16px;
@@ -227,6 +227,7 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    display: none;
 }
 
 #back:hover {
@@ -299,6 +300,28 @@ ol {
 
 @media screen and (max-width: 800px) {
     #result {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 500px);
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+
+    }
+
+    ol {
+        width: auto;
+        columns: 1;
+        column-gap: 5em;
+        letter-spacing: 0.5;
+    }
+
+    ol li {
+        gap: .3125rem;
+    }
+
+    #PreparationInstructionsText {
+        width: 400px;
+        padding: 0;
     }
 }
